@@ -11,7 +11,7 @@ module.exports = function (app) {
     app.get("/api/books", book.findAll);
   
     // get  a single book by Id
-    app.get("/api/books/:bookId", book.findByPk);
+    app.get("/api/books/:nameBook", book.findByPk);
   
     // Update a book with Id
     app.put("/api/books/:bookId", book.update);
