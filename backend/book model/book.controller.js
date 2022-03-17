@@ -27,14 +27,14 @@ exports.findAll = (req, res) => {
 }
 
 // Find a book by Id
-exports.findByPk = (req, res) => {
-    Book.findByPk(req.params.bookId).then((book) => {
+exports.findByName = (req, res) => {
+    Book.findOne({where : {bookName: req.params.bookName}}).then((book) => {
       res.status(200).json({
         status: true,
         data: book,
       })
     })
-  }
+}
   
   // Update a book
   exports.update = (req, res) => {
